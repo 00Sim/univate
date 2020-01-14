@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "organizer": [
+      {
+        "id": 1,
+        "name": "Yvonne",
+        "contact": "yvonne123@cornell.edu",
+        "graduate": 2019
+      }
+    ],
+    "date": "06-02-19",
+    "event_photo": "https://api.adorable.io/avatars/64/1",
+    "description": "LGBTQ+ campus march to celebrate Pride month",
+    "success": 75,
+    "college": "Cornell University",
+    "cause": "Queer Rights",
+    "metrics": []
+  },
+  {
+    "id": 2,
+    "organizer": [
+      {
+        "id": 1,
+        "name": "Simin",
+        "contact": "simin123@cornell.edu",
+        "graduate": 2019
+      }
+    ],
+    "date": "11-02-19",
+    "event_photo": "https://api.adorable.io/avatars/64/1",
+    "description": "Hosted clothing drive for homeless people in the community",
+    "success": 75,
+    "college": "University of Maryland",
+    "cause": "Fighting Poverty",
+    "metrics": []
+  },
+  {
+    "id": 3,
+    "organizer": [
+      {
+        "id": 1,
+        "name": "Raquel",
+        "contact": "raquel123@cornell.edu",
+        "graduate": 2019
+      }
+    ],
+    "date": "04-22-19",
+    "event_photo": "https://api.adorable.io/avatars/64/1",
+    "description": "Meet local goats and adopt them to give them better homes!",
+    "success": 35,
+    "college": "Olin College",
+    "cause": "Animal Rights",
+    "metrics": []
+  },
+  {
+    "id": 4,
+    "organizer": [
+      {
+        "id": 1,
+        "name": "Arundhati",
+        "contact": "arundhati123@cornell.edu",
+        "graduate": 2019
+      }
+    ],
+    "date": "8-4-18",
+    "event_photo": "https://api.adorable.io/avatars/64/1",
+    "description": "Recycling initiative to have a recycling bin with every trash bin on campus",
+    "success": 95,
+    "college": "University of Southern California",
+    "cause": "Climate Change",
+    "metrics": []
+  },
+  {
+    "id": 5,
+    "organizer": [
+      {
+        "id": 1,
+        "name": "Anna",
+        "contact": "anna123@cornell.edu",
+        "graduate": 2019
+      }
+    ],
+    "date": "10-02-19",
+    "event_photo": "https://api.adorable.io/avatars/64/1",
+    "description": "Canned food drive where students can donate preserved food to be distributed at local homeless shelters.",
+    "success": 60,
+    "college": "Cornell University",
+    "cause": "Food Waste & Distribution",
+    "metrics": []
+  }
+]
