@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.home-card {
+  padding: 100px;
+  font-family: 'Avenir LT Std', sans-serif;
+}
+
+.search-bar {
+  font-size: 2rem;
+  padding: 25px 15px;
+}

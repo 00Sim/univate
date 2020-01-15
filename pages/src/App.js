@@ -1,27 +1,26 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import Feed from './components/Feed';
-import tweets from './content/tweets.json';
+import Home from './components/Home';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      tweets: tweets
+      events: []
     };
   }
-  
-  
+
+
   render() {
     return (
       <div className="container">
         <div>
           {/* Replace this to the react component you are working on */}
-          <Feed tweets={this.state.tweets} /> 
+          <Home events={this.state.events} />
         </div>
       </div>
     );
   };
-  }
+}
 
 export default App;
