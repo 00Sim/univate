@@ -14,6 +14,7 @@
     "description": "LGBTQ+ campus march to celebrate Pride month",
     "success": 75,
     "college": "Cornell University",
+    "org_name": "Cornell GSA",
     "cause": "Queer Rights",
     "metrics": []
   },
@@ -32,6 +33,7 @@
     "description": "Hosted clothing drive for homeless people in the community",
     "success": 75,
     "college": "University of Maryland",
+    "org_name": "Heart2Home",
     "cause": "Fighting Poverty",
     "metrics": []
   },
@@ -50,6 +52,7 @@
     "description": "Meet local goats and adopt them to give them better homes!",
     "success": 35,
     "college": "Olin College",
+    "org_name": "Herd",
     "cause": "Animal Rights",
     "metrics": []
   },
@@ -68,6 +71,7 @@
     "description": "Recycling initiative to have a recycling bin with every trash bin on campus",
     "success": 95,
     "college": "University of Southern California",
+    "org_name": "GreenSC",
     "cause": "Climate Change",
     "metrics": []
   },
@@ -86,6 +90,7 @@
     "description": "Canned food drive where students can donate preserved food to be distributed at local homeless shelters.",
     "success": 60,
     "college": "Cornell University",
+    "org_name": "Food Recovery Network",
     "cause": "Food Waste & Distribution",
     "metrics": []
   }
