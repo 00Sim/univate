@@ -1,21 +1,21 @@
 import React from "react";
 import Organizer from "./Organizer"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react_fontawesome'
 
 const Event = props => {
   return (
-    <div className="event-card">
+    <div className="event_card">
       <div className="photo"> {<img src={`${props.event.event_photo}`} />}</div>
       <hr />
 
       <div className="information">
-        <div className="event-title">{`${props.event.title}`}</div>
+        <div className="event_title">{`${props.event.title}`}</div>
 
-        <div className="organization-name">{`${props.event.cause}`}</div>
+        <div className="organization_name">{`${props.event.cause}`}</div>
 
         <br/>
 
-        <div className="date"> <FontAwesomeIcon icon="check-square" /> {`${props.event.date}`}</div>
+        <div className="date"> <FontAwesomeIcon icon="check_square" /> {`${props.event.date}`}</div>
 
         <br/>
 
