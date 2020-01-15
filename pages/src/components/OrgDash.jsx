@@ -1,11 +1,14 @@
 import React from 'react';
 import LineChart from './LineChart';
+import WebMenu from './WebMenu';
+
 import {
   Container,
   Grid,
   Header,
   Text,
-  GridRow
+  GridRow,
+  Image
 } from 'semantic-ui-react'
 
 
@@ -45,16 +48,19 @@ const InlineStyle = () => (
 
 
 const OrgDash = props => {
-  const {sampleEvents} = props;
+  const {selectedOrg} = props;
   const {
-    user_profile_photo
-  } = sampleEvents;
+    organization_name,
+    organization_photo,
+    organization_mission,
+    website
+  } = selectedOrg;
 
   var mainBody = {
     margin: '35px',
   }
   var banner = {
-    paddingTop: '6rem',
+    paddingTop: '3rem',
     paddingBottom: '2rem',
     top: '50%',
     display: 'inline-block',
@@ -62,12 +68,25 @@ const OrgDash = props => {
 
   var profilePic = {
       border: '3px solid ',
-      border_radius: '20%',
       margin_left: 'auto',
       margin_right: 'auto',
       width: '115px',
       height: '115px'
   }
+
+    
+  function myFunction(x) {
+    if (x.matches) { // If media query matches
+      profilePic.width = '50px';
+      profilePic.height = '50px';
+    } 
+  }
+
+  var x = window.matchMedia("(max-width: 700px)")
+
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes 
+
   return (
     <div>
       <InlineStyle />
@@ -75,47 +94,39 @@ const OrgDash = props => {
     <Container>
     
 
-    <div className="ui fixed inverted menu" style={{backgroundColor: '#799bf2'}}>
-      <div className="ui container">
-        <a href="#" className="header item">UNIVATE</a>
-        <a href="#" className="item">Home</a>
-
-      </div>
-    </div>
+    <WebMenu></WebMenu>
   
 
     <Grid style={mainBody}>
       <Grid.Row style={banner}>
         <Grid.Column width={3}>
         <div className="profile" >
-          <img style={profilePic} src="https://images.squarespace-cdn.com/content/555b5cf1e4b0864ccf1a0156/1468955257499-HU0LFLHSHTDECF0SW7VY/FRN+Logo.png?content-type=image%2Fpng"/>
+          <img className="ui centered rounded image"   style={profilePic} src={organization_photo} />
        </div>
         </Grid.Column>
         <Grid.Column width={13}>
-          <Header as='h1' style={{margin_top:'10rem'}}>UM Food Recovery Network</Header>
+  <Header as='h1' style={{margin_top:'10rem'}}> {organization_name}</Header>
           <p><strong> Mission: </strong>
-           Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+           {organization_mission}
           </p> 
 
-          <p>Website: https://api.adorable.io/avatars/64/3</p>
+          <p>Website: {website}</p>
 
-          <div class="ui red button">
-            <i class="mail icon"></i> Email
+          <div className="ui red button">
+            <i className="mail icon"></i> Email
           </div>
 
-          <button class="ui facebook button">
-            <i class="facebook icon"></i>
+          <button className="ui facebook button">
+            <i className="facebook icon"></i>
             Facebook
           </button>
-          <button class="ui twitter button">
-            <i class="twitter icon"></i>
+          <button className="ui twitter button">
+            <i className="twitter icon"></i>
             Twitter
           </button>
         </Grid.Column>
         
-      <div class="ui divider"></div>
+      <div className="ui divider"></div>
       </Grid.Row>
       <Grid.Row>
       <Header as='h3'>Avg Attendance by Month</Header>
