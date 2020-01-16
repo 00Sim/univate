@@ -1,40 +1,34 @@
 import React from "react";
-import Organizer from "./Organizer"
+
 
 const Event = props => {
   return (
-    <div className="event_card">
-      <div className="photo"> {<img src={`${props.event.event_photo}`} />}</div>
-      <hr />
 
-      <div className="information">
-        <div className="event_title">{`${props.event.title}`}</div>
-
-        <div className="organization_name">{`${props.event.cause}`}</div>
-
+    <div class="ui card">
+      <div class="image" >
+        {<img class="event_image" alt="" src={`${props.event.event_photo}`} />}
+      </div>
+      <div class="content">
+        <h1 class="ui header">{`${props.event.cause}`}</h1>
+        <div class="meta">
+          <span class="date"><i class="calendar icon"></i> {`${props.event.date}`}</span>
+        </div>
+        <div class="description">
+          {`${props.event.description}`}
+        </div>
+      </div>
+      <div class="extra content">
+        <a>
+          <i class="user icon"></i>
+          {`${props.event.organization_name}`}
+        </a>
         <br />
-
-        <div className="date">  {`${props.event.date}`}</div>
-
-        <br />
-
-        <div className="college">{`${props.event.college}`}</div>
-
-        <br />
-
-        <div className="description">{`${props.event.description}`}</div>
-
-        <br />
-
-        {props.event.organizer.map(organizer => (
-          <Organizer organizer={organizer} key={organizer.id} />
-        ))
-        }
-
-
 
       </div>
+
     </div>
+
+
   );
 };
 

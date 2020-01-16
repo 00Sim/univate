@@ -11,6 +11,7 @@ class Home extends Component {
     this.state = {
       events: sampleEvents,
       searchText: '',
+      searched: false,
       results: []
     };
   }
@@ -34,7 +35,10 @@ class Home extends Component {
       return item.event_name.toLowerCase().indexOf(
         this.state.searchText.toLowerCase()) !== -1
     });
-    this.setState({ results: items });
+    this.setState({
+      results: items,
+      searched: true
+    });
   }
 
   render() {
@@ -42,7 +46,6 @@ class Home extends Component {
       <div className="home-card" >
         <div> <WebMenu> </WebMenu> </div>
         <h1> Make change on your campus today.</h1>
-        <h2> I want to find events and organizations near </h2>
         <div className="search-bar" >
           <form>
             <input type="text" placeholder="Search" onChange={this.search}></input>
@@ -52,7 +55,7 @@ class Home extends Component {
         </div>
         <div className="results">
           {
-            this.state.results.length !== 0 ?
+            this.state.results.length !== 0 || !this.state.searched ?
               this.state.results.map(event => {
                 return <Event event={event} key={event.id} />
               }) :
