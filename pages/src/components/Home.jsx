@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Search from './Search';
 import WebMenu from './WebMenu';
 import Event from './Event';
 import sampleEvents from '../content/sampleEvents.json';
