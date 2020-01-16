@@ -1,6 +1,7 @@
 import React from 'react';
 import LineChart from './LineChart';
 import WebMenu from './WebMenu';
+// import EventForm from './EventForm';
 
 import {
   Container,
@@ -137,6 +138,12 @@ const OrgDash = props => {
       </GridRow>
       
     </Grid>
+    {/* <GridRow>
+      <EventForm/>
+    </GridRow> */}
+      
+    
+
   </Container>
 
   </div>

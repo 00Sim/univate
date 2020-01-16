@@ -1,6 +1,5 @@
 import React from "react";
 import Organizer from "./Organizer"
-import { FontAwesomeIcon } from '@fortawesome/react_fontawesome'
 
 const Event = props => {
   return (
@@ -15,7 +14,7 @@ const Event = props => {
 
         <br/>
 
-        <div className="date"> <FontAwesomeIcon icon="check_square" /> {`${props.event.date}`}</div>
+        <div className="date">  {`${props.event.date}`}</div>
 
         <br/>
 
