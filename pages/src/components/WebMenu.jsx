@@ -48,15 +48,29 @@ const WebMenu = props => {
     <div>
       <InlineStyle />
   
-        {/* <Container>
-            <div className="ui fixed inverted menu" style={{backgroundColor: '#ffa845'}}>
-            <div className="ui container">
-                <a href="#" className="header item">UNIVATE</a>
-                <Menu.Item as={Link} to='/home' />
-                <a href="#" className="item">Home</a>
-            </div>
-            </div>
-        </Container> */}
+        <Container>
+          <div className="ui fixed inverted menu" style={{backgroundColor: '#ffa845'}}>
+          <div className="ui container">
+              <a href="#" className="header item">UNIVATE</a>
+                  
+          <Menu.Item as={Link} to="/home">
+          Find Orgs & Events
+          </Menu.Item>
+          <Menu.Item >
+            Messages
+          </Menu.Item>
+
+          <Menu.Menu position='right'>
+            <Menu.Item>
+              <Input icon='search' placeholder='Search...' />
+            </Menu.Item>
+            <Menu.Item as={Link} to="/dash">
+            Your Profile
+          </Menu.Item>
+          </Menu.Menu>
+              </div>
+              </div>
+        </Container>
         {/* <Menu>
         <Menu.Item as={Link} to="/home">
           UNIVATE
@@ -66,15 +80,20 @@ const WebMenu = props => {
         </Menu.Item>
         </Menu> */}
 
-        <Menu >
+        {/* <Menu >
         <Menu.Item as={Link} to="/home">
           UNIVATE
         </Menu.Item>
 
         <Menu.Item
-          name='messages'
+          name='Find Orgs'
         />
-      
+
+        <Menu.Item as={Link} to="/event">
+        Find Events
+        </Menu.Item>
+
+       
         <Menu.Menu position='right'>
           <Menu.Item>
             <Input icon='search' placeholder='Search...' />
@@ -84,7 +103,7 @@ const WebMenu = props => {
         </Menu.Item>
         </Menu.Menu>
       </Menu>
-
+ */}
 
   </div>
   );

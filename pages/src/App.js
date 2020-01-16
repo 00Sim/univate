@@ -5,8 +5,9 @@ import './App.css';
 import org from './components/Home';
 import ExpandedEvent from './components/ExpandedEvent'
 import sampleOrg from './content/sampleOrg'
+import sampleEvents from './content/sampleEvents'
 import OrgDash from './components/OrgDash'
-
+import Form from './components/Form'
 import {
   BrowserRouter as Router,
   Route,
@@ -21,7 +22,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      events: [],
+      events: sampleEvents,
       selectedOrg: sampleOrg
     };
   }
@@ -34,9 +35,19 @@ class App extends Component {
         <Route path="/home" component={Home}/>
         <Route
         path='/dash'
-        render={(props) => <OrgDash {...props} selectedOrg={this.state.selectedOrg} />}
+        render={(props) => <OrgDash {...props} selectedOrg={this.state.selectedOrg} events={this.state.events}/>}
       />
-      </Router>
+      <Route
+        path='/event'
+        render={(props) => <ExpandedEvent {...props} events={this.state.events} />}
+      />
+
+      <Route
+        path='/form'
+        render={(props) => <Form />}
+      />
+      </
+      Router>
       // <div className="container">
       //   <div>
       //     {/* Replace this to the react component you are working on */}
