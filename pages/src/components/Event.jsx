@@ -6,7 +6,7 @@ const Event = props => {
 
     <div class="ui card">
       <div class="image" >
-        {<img class="event_image" alt="" src={`${props.event.event_photo}`} />}
+        {<img className="event_image" alt="" src={`${props.event.event_photo}`} />}
       </div>
       <div class="content">
         <h1 class="ui header">{`${props.event.cause}`}</h1>
