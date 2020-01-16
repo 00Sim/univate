@@ -32,6 +32,10 @@ class App extends Component {
 
       <Router>
         <Route path="/home" component={Home}/>
+        <Route
+        path='/dash'
+        render={(props) => <OrgDash {...props} selectedOrg={this.state.selectedOrg} />}
+      />
       </Router>
       // <div className="container">
       //   <div>
