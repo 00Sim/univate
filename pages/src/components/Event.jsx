@@ -1,6 +1,5 @@
 import React from "react";
 import Organizer from "./Organizer"
-import { FontAwesomeIcon } from '@fortawesome/react_fontawesome'
 
 const Event = props => {
   return (
@@ -13,19 +12,19 @@ const Event = props => {
 
         <div className="organization_name">{`${props.event.cause}`}</div>
 
-        <br/>
+        <br />
 
-        <div className="date"> <FontAwesomeIcon icon="check_square" /> {`${props.event.date}`}</div>
+        <div className="date">  {`${props.event.date}`}</div>
 
-        <br/>
+        <br />
 
         <div className="college">{`${props.event.college}`}</div>
 
-        <br/>
+        <br />
 
         <div className="description">{`${props.event.description}`}</div>
 
-        <br/>
+        <br />
 
         {props.event.organizer.map(organizer => (
           <Organizer organizer={organizer} key={organizer.id} />

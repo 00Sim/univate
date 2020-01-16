@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Search from './Search';
+import WebMenu from './WebMenu';
+import Event from './Event';
 import sampleEvents from '../content/sampleEvents.json';
 
 
@@ -39,6 +41,9 @@ class Home extends Component {
   render() {
     return (
       <div className="home-card" >
+        <div> <WebMenu> </WebMenu> </div>
+        <h1> Make change on your campus today.</h1>
+        <h2> I want to find events and organizations near </h2>
         <div className="search-bar" >
           <form>
             <input type="text" placeholder="Search" onChange={this.search}></input>
@@ -50,7 +55,7 @@ class Home extends Component {
           {
             this.state.results.length !== 0 ?
               this.state.results.map(event => {
-                return <div key={event.id}>{event.event_name}</div>
+                return <Event event={event} key={event.id} />
               }) :
               <div> No events match your search. </div>
           }
