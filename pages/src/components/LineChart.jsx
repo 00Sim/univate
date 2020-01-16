@@ -17,19 +17,7 @@ class LineChart extends Component {
         },
         xaxis: {
           categories: ['Jan', 'Feb', 'Mar', 'May', 'June',]
-        },
-        // fill: {
-        //   type: 'gradient',
-        //   gradient: {
-        //     shade: 'light',
-        //     gradientToColors: [ '#ff6b6b'],
-        //     shadeIntensity: 1,
-        //     type: 'horizontal',
-        //     opacityFrom: 1,
-        //     opacityTo: 1,
-        //     stops: [0, 100, 100, 100]
-        //   },
-        // },
+        }
       },
       series: [{
         name: "People Attended",
